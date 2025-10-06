@@ -64,5 +64,22 @@ int main(){
         std::cout << "x " << i + 1 << "-e равняется: " << Xs[i] << std::endl;
     }
 
+    std::cout << "\nПроверка решения:" << std::endl;
+    for (int i = 0; i < size; ++i) {
+        float lhs = 0.0f;
+
+        if (i > 0) {
+            lhs += a[i] * Xs[i - 1];
+        }
+        lhs += b[i] * Xs[i];
+        if (i < size - 1) {
+            lhs += c[i] * Xs[i + 1];
+        }
+
+        std::cout << "Уравнение " << i + 1 << ": Вычислено = " << lhs 
+                  << ", Задано (d_i) = " << d[i] 
+                  << std::endl;
+    }
+
     return 0;
 }
