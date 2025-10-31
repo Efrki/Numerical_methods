@@ -167,7 +167,6 @@ int main() {
     std::cout << "\n--- Результат QR-алгоритма ---" << std::endl;
     std::cout << "Выполнено " << iterations << " итераций." << std::endl;
     
-    std::cout << "\nИтоговая матрица (вещественная форма Шура):" << std::endl;
     print_matrix(A, "A_final");
 
     std::cout << "\nНайденные собственные значения:" << std::endl;
